@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Price Prediction</title>
+    <style>
+        /* --- General Body & Font Styling --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Main Container for the App --- */
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        /* --- Header Styles --- */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #555;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        /* --- Form Styling --- */
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box; /* Important for padding */
+            font-size: 1em;
+        }
+        form input:focus, form select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        }
+
+        /* --- Button Styling --- */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* --- Results Section --- */
+        .results-section {
+            margin-top: 20px;
+        }
+        .results-section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .results-section p {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap; /* Allows text to wrap */
+            word-wrap: break-word;
+        }
+        #prediction-result {
+            font-size: 1.8em;
+            color: #28a745;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Prediction Form -->
+    <div class="container">
+        <h1>Travel Price Prediction</h1>
+        <h3>Enter customer and flight details to get a price estimate.</h3>
+
+        <form method="POST" action="/predict">
+            <!-- UPDATED "From" Dropdown -->
+            <label for="from_loc">From:</label>
+            <select id="from_loc" name="from">
+                <option value="Recife (PE)">Recife (PE)</option>
+                <option value="Florianopolis (SC)">Florianopolis (SC)</option>
+                <option value="Brasilia (DF)">Brasilia (DF)</option>
+                <option value="Aracaju (SE)">Aracaju (SE)</option>
+                <option value="Salvador (BH)">Salvador (BH)</option>
+                <option value="Campo Grande (MS)">Campo Grande (MS)</option>
+                <option value="Sao Paulo (SP)">Sao Paulo (SP)</option>
+                <option value="Natal (RN)">Natal (RN)</option>
+                <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
+            </select>
+
+            <!-- UPDATED "To" Dropdown -->
+            <label for="to_loc">To:</label>
+            <select id="to_loc" name="to">
+                <option value="Florianopolis (SC)">Florianopolis (SC)</option>
+                <option value="Recife (PE)">Recife (PE)</option>
+                <option value="Brasilia (DF)">Brasilia (DF)</option>
+                <option value="Salvador (BH)">Salvador (BH)</option>
+                <option value="Aracaju (SE)">Aracaju (SE)</option>
+                <option value="Campo Grande (MS)">Campo Grande (MS)</option>
+                <option value="Sao Paulo (SP)">Sao Paulo (SP)</option>
+                <option value="Natal (RN)">Natal (RN)</option>
+                <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
+            </select>
+
+            <label for="distance">Distance (in km):</label>
+            <input type="number" id="distance" name="distance" placeholder="e.g., 5570" required>
+
+            <label for="flightType">Flight Class:</label>
+            <select id="flightType" name="flightType">
+                <option value="firstClass">First Class</option>
+                <option value="premium">Premium Economy</option>
+                <option value="economic">Economy</option>
+            </select>
+
+            <label for="agency">Agency:</label>
+            <select id="agency" name="agency">
+                <option value="CloudFy">CloudFy</option>
+                <option value="Rainbow">Rainbow</option>
+                <option value="FlyingDrops">FlyingDrops</option>
+            </select>
+
+            <button type="submit">Predict Price</button>
+        </form>
+    </div>
+
+    <!-- Results Display Section -->
+    <div class="container results-section">
+        <h2>Prediction Result</h2>
+        <p id="prediction-result">{{ result }} Rs</p>
+
+        <div class="details">
+            <h3>Submitted Data Details</h3>
+
+            <h2>Raw Input:</h2>
+            <p>{{ data }}</p>
+
+            <h2>Preprocessed Data:</h2>
+            <p>{{ data2 }}</p>
+        </div>
+    </div>
+
+</body>
+</html>
