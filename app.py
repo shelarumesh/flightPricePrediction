@@ -1,6 +1,5 @@
 # NEW CODE - USE THIS
 from flask import Flask, request,render_template
-import pickle
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 import numpy as np
@@ -60,4 +59,4 @@ def price_prediction():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

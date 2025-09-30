@@ -6,7 +6,7 @@ WORKDIR app/
 
 # Copy requirements.txt and install dependencies
 COPY ./requirements.txt /app/requirements.txt
-COPY ./save_model/decision_tree_regressor_model.pkl /app/save_model/decision_tree_regressor_model.pkl
+COPY ./decision_tree_regressor_model.pkl /app/decision_tree_regressor_model.pkl
 COPY ./save_model/transformer.pkl /app/save_model/transformer.pkl
 COPY ./templates/index.html /app/templates/index.html
 COPY ./app.py /app/app.py
