@@ -41,6 +41,10 @@ This section focused on building a robust regression model to achieve the highes
 * ### **Optimal Model Selection**
     * The **Decision Tree Regressor** was identified as the best-performing model based on the highest R2 score and lowest error metrics.
     * The final optimized model was **saved** (`decision_tree_regressor_model.pkl`) using Python's `pickle` library for immediate deployment.
+    
+    ![alt text](image.png)
+    ![alt text](image-1.png)
+
 
 ## III. Productionization and Deployment (Sections 2 & 3)
 
