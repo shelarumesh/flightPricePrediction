@@ -22,5 +22,7 @@ COPY ./save_model/decision_tree_regressor_model.pkl /app/save_model/
 # Expose the port the app runs on (Informational for Docker)
 EXPOSE 5000
 
+ENV FLASK_APP=app.py
+
 # Run the application (This keeps the container running)
-CMD ["python", "app.py"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]

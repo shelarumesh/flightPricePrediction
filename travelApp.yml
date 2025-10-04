@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travel-app-deployment
+  labels:
+    app: travelApp
+spec:
+  # Ensures that if the image changes, all replicas are updated
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  
+  # Defines the desired number of running instances
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: travelApp
+  template:
+    metadata:
+      labels:
+        app: travelApp
+    spec:
+      containers:
+        - name: travel-app-container
+          # IMPORTANT: Replace with your final Docker Hub image
+          image: ups01ds/travel-price-predictor:v1.1.0 
+          ports:
+            - containerPort: 5000
+          env:
+            # Setting environment variables for the Flask application
+            - name: FLASK_ENV
+              value: "production" 
+            - name: FLASK_APP
+              value: "app.py"
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+
+---
+# Separator between Kubernetes objects
+
+apiVersion: v1 # Correct API version for Service objects
+kind: Service
+metadata:
+  name: travel-app-service
+  labels:
+    app: travelApp
+spec:
+  # The LoadBalancer type exposes the service externally, which is ideal for Minikube
+  type: LoadBalancer
+  selector:
+    app: travelApp # Selects the containers managed by the Deployment above
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80 # Port exposed by the service (what you access on the cluster IP)
+      targetPort: 5000 # Port the container is actually listening on (Flask default)
