@@ -1,19 +1,15 @@
 from flask import Flask, request,render_template
 import pandas as pd
-from sklearn.compose import ColumnTransformer
 import numpy as np
+from sklearn.compose import ColumnTransformer
 import pickle
 import os
 import streamlit as st
-import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 import warnings
 warnings.filterwarnings('ignore')
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
-import numpy as np
+
 
 # Load the dataset (assuming 'df' is available)
 path = 'D:/AlmaBetter/P01_travelPrice/data/hotels.csv'
@@ -21,8 +17,7 @@ df = pd.read_csv(path)
 df.head()
 data = df[:5000]
 
-# Reduce the size of your recommendation set significantly to fit in RAM.
-# Adjust N based on your available memory (try 5000 or less first).
+# To avoid MemoryError, we will sample a smaller subset of the data
 N_SAMPLES = 5000 
 data_sampled = data.sample(n=N_SAMPLES, random_state=42).reset_index(drop=True)
 
@@ -37,19 +32,10 @@ tfidf_vectorizer = TfidfVectorizer(stop_words='english')
 tfidf_matrix_sampled = tfidf_vectorizer.fit_transform(data_sampled['Hotel_Info'])
 
 # Compute the cosine similarity on the smaller matrix
-# This matrix will be N_SAMPLES x N_SAMPLES (much smaller than 40k x 40k)
 cosine_sim = linear_kernel(tfidf_matrix_sampled, tfidf_matrix_sampled)
 
 print(f"New similarity matrix shape: {cosine_sim.shape}")
 print("Successfully created similarity matrix without MemoryError.")
-
-# Note: You must now update your get_hotel_recommendations function 
-# to use data_sampled instead of the original 'data' 
-# and use the indices of the sampled dataset.
-
-
-
-
 
 # Function to get hotel recommendations based on Package Type, Start City, Price, and Destination
 def get_hotel_recommendations(place, days, price, total, cosine_sim=cosine_sim):
@@ -80,7 +66,7 @@ def get_hotel_recommendations(place, days, price, total, cosine_sim=cosine_sim):
     recommended_hotels_df = recommended_hotels_df.sort_values(by='Avg Similarity Score', ascending=False)
 
     # Return the recommended hotel details
-    return recommended_hotels_df[['travelCode', 'Hotel Details']]
+return recommended_hotels_df['Hotel Details'].value_counts()
 
 # Example usage: Get hotel recommendations based on input criteria
 days = 3
@@ -112,7 +98,3 @@ total = st.slider("Select Total : ", min_value=0, max_value=totals_max)
 if st.button("Show Recommended Hotels"):
     recommended_hotels = get_hotel_recommendations(place, days, price, total)
     st.write(recommended_hotels)
-
-
-
-# User inputs for Package Type, Start City, Price, and Destination
