@@ -1,0 +1,56 @@
+2025-10-09 10:45:14,606 - ModelTraining - ERROR - An error occurred during model training: The DType <class 'numpy.dtypes.Int64DType'> could not be promoted by <class 'numpy.dtypes.DateTime64DType'>. This means that no common DType exists for the given inputs. For example they cannot be stored in a single array unless the dtype is `object`. The full list of DTypes is: (<class 'numpy.dtypes.Int64DType'>, <class 'numpy.dtypes.Int64DType'>, <class 'numpy.dtypes.ObjectDType'>, <class 'numpy.dtypes.ObjectDType'>, <class 'numpy.dtypes.ObjectDType'>, <class 'numpy.dtypes.Float64DType'>, <class 'numpy.dtypes.Float64DType'>, <class 'numpy.dtypes.ObjectDType'>, <class 'numpy.dtypes.DateTime64DType'>)
+2025-10-09 11:58:00,558 - ModelTraining - ERROR - An error occurred during model training: cannot access local variable 'data_transformation' where it is not associated with a value
+2025-10-09 11:59:05,795 - ModelTraining - ERROR - An error occurred during model training: cannot access local variable 'data_transformation' where it is not associated with a value
+2025-10-09 12:01:01,455 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:03:28,687 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:03:28,754 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:03:28,757 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:04:51,127 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:04:51,191 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:04:51,194 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:06:12,392 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:06:12,455 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:06:12,469 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:08:12,385 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:08:12,456 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:08:12,480 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:09:49,715 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:09:49,809 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:09:49,833 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:12:59,606 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:12:59,669 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:12:59,680 - ModelTraining - INFO - Model training started.
+2025-10-09 12:12:59,683 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:14:44,140 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:14:44,200 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:14:44,208 - ModelTraining - INFO - Model training started.
+2025-10-09 12:14:44,211 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:17:15,268 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:17:15,340 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:17:15,349 - ModelTraining - INFO - Model training started.
+2025-10-09 12:17:15,351 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 12:18:56,185 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 12:18:56,246 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 12:18:56,255 - ModelTraining - INFO - Model training started.
+2025-10-09 12:18:56,259 - ModelTraining - ERROR - An error occurred during model training: setting an array element with a sequence.
+2025-10-09 14:12:48,953 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 14:12:49,035 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 14:12:49,053 - ModelTraining - INFO - Model training started.
+2025-10-09 15:21:01,236 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 15:21:01,316 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 15:21:01,326 - ModelTraining - INFO - Model training started.
+2025-10-09 15:28:41,517 - ModelTraining - INFO - Model training completed successfully.
+2025-10-09 15:28:42,267 - ModelTraining - INFO - Model Evaluation Metrics - MAE: 0.00917264886861222, MSE: 0.11093413393706995, RMSE: 0.3330677617798966
+2025-10-09 15:28:42,369 - ModelTraining - INFO - Model saved successfully at D:\AlmaBetter\P01_travelPrice\src\models\travel_price_model.pkl
+2025-10-09 15:28:49,857 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 15:28:49,931 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 15:28:49,939 - ModelTraining - INFO - Model training started.
+2025-10-09 15:36:26,880 - ModelTraining - INFO - Model training completed successfully.
+2025-10-09 15:36:27,630 - ModelTraining - INFO - Model Evaluation Metrics - MAE: 0.00917264886861222, MSE: 0.11093413393706995, RMSE: 0.3330677617798966
+2025-10-09 15:36:27,741 - ModelTraining - INFO - Model saved successfully at D:\AlmaBetter\P01_travelPrice\src\models\travel_price_model.pkl
+2025-10-09 15:36:36,341 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 15:36:36,416 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 15:36:36,427 - ModelTraining - INFO - Model training started.
+2025-10-09 15:44:04,792 - ModelTraining - INFO - Model training completed successfully.
+2025-10-09 15:44:05,525 - ModelTraining - INFO - Model Evaluation Metrics - MAE: 0.00917264886861222, MSE: 0.11093413393706995, RMSE: 0.3330677617798966
+2025-10-09 15:44:05,621 - ModelTraining - INFO - Model saved successfully at D:\AlmaBetter\P01_travelPrice\src\models\travel_price_model.pkl
