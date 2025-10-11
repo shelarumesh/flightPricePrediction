@@ -1,0 +1,3 @@
+2025-10-09 17:30:58,267 - data_log - INFO - Data read successfully.
+2025-10-09 17:30:59,385 - data_log - INFO - Data transformed successfully.
+2025-10-09 17:38:37,680 - data_log - ERROR - An error occurred: An error occurred during model training: continuous is not supported

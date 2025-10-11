@@ -1,7 +1,7 @@
 import pandas as pd
 import os 
 import numpy as np
-import logger_setup
+import AlmaBetter.P01_travelPrice.src.airflow.dags.logger_setup as logger_setup
 
 logger = logger_setup.setup_logger("DataIngestion", "D:\\AlmaBetter\\P01_travelPrice\\src\\logs\\data_ingestion.log")
 

@@ -1,0 +1,17 @@
+version: '7'
+services:
+
+  sleek-airflow:
+
+    image: airflow-image:latest
+
+    volumes:
+
+      - ./airflow:/opt/airflow
+      - ./data:/opt/data
+
+    ports:
+
+      - "8080:8080"
+
+    command: airflow standalone

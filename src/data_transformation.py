@@ -1,6 +1,6 @@
 import pandas as pd 
 import numpy as np
-import logger_setup
+import AlmaBetter.P01_travelPrice.src.airflow.dags.logger_setup as logger_setup
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder, OrdinalEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline

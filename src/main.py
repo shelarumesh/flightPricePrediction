@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 import os
-import logger_setup
-import data_ingstion
-import data_transformation
-import model_training
+import AlmaBetter.P01_travelPrice.src.airflow.dags.logger_setup as logger_setup
+import AlmaBetter.P01_travelPrice.src.airflow.dags.data_ingstion as data_ingstion
+import AlmaBetter.P01_travelPrice.src.airflow.dags.data_transformation as data_transformation
+import AlmaBetter.P01_travelPrice.src.airflow.dags.model_training as model_training
 
 logger = logger_setup.setup_logger("data_log", "logs/data_log.log")
 

@@ -1,12 +1,13 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-import logger_setup
+import AlmaBetter.P01_travelPrice.src.airflow.dags.logger_setup as logger_setup
 import os
 import joblib
 import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error
-import data_transformation
+import AlmaBetter.P01_travelPrice.src.airflow.dags.data_transformation as data_transformation
+from sklearn.metrics import r2_score, accuracy_score
 
 
 logger = logger_setup.setup_logger("ModelTraining", "D:\\AlmaBetter\\P01_travelPrice\\src\\logs\\model_training.log")
@@ -44,8 +45,10 @@ class ModelTraining:
             mae = mean_absolute_error(y_test, y_pred)
             mse = mean_squared_error(y_test, y_pred)
             rmse = np.sqrt(mse)
-
-            logger.info(f"Model Evaluation Metrics - MAE: {mae}, MSE: {mse}, RMSE: {rmse}")
+            r2 = r2_score(y_test, y_pred)
+            accuracy = accuracy_score(y_test, y_pred)
+            print(f"MAE: {mae}, MSE: {mse}, RMSE: {rmse}, R2: {r2}, Accuracy: {accuracy}")
+            logger.info(f"Model Evaluation Metrics - \nMAE: {mae}, \nMSE: {mse}, \nRMSE: {rmse}, \nR2: {r2}, \nAccuracy: {accuracy}")
 
         except Exception as e:
             logger.error(f"An error occurred during model training: {e}")

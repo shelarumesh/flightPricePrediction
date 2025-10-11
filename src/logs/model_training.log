@@ -54,3 +54,8 @@
 2025-10-09 15:44:04,792 - ModelTraining - INFO - Model training completed successfully.
 2025-10-09 15:44:05,525 - ModelTraining - INFO - Model Evaluation Metrics - MAE: 0.00917264886861222, MSE: 0.11093413393706995, RMSE: 0.3330677617798966
 2025-10-09 15:44:05,621 - ModelTraining - INFO - Model saved successfully at D:\AlmaBetter\P01_travelPrice\src\models\travel_price_model.pkl
+2025-10-09 17:31:00,312 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-09 17:31:00,386 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-09 17:31:00,398 - ModelTraining - INFO - Model training started.
+2025-10-09 17:38:36,919 - ModelTraining - INFO - Model training completed successfully.
+2025-10-09 17:38:37,680 - ModelTraining - ERROR - An error occurred during model training: continuous is not supported
