@@ -1,12 +1,12 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-import AlmaBetter.P01_travelPrice.src.airflow.dags.logger_setup as logger_setup
+import logger_setup as logger_setup
 import os
 import joblib
 import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error
-import AlmaBetter.P01_travelPrice.src.airflow.dags.data_transformation as data_transformation
+import data_transformation as data_transformation
 from sklearn.metrics import r2_score, accuracy_score
 
 

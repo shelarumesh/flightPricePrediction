@@ -1,4 +1,4 @@
-version: '7'
+version: '10.0'
 services:
 
   sleek-airflow:
@@ -8,6 +8,7 @@ services:
     volumes:
 
       - ./airflow:/opt/airflow
+      - ./logs:/opt/airflow/models
       - ./data:/opt/data
 
     ports:

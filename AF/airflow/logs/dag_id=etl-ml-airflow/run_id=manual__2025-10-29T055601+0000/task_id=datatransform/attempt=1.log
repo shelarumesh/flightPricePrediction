@@ -1,0 +1,10 @@
+{"timestamp":"2025-10-29T05:56:51.182665Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-29T05:56:51.199334Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/travel_airflow.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-29T05:57:10.053607Z","level":"info","event":"start time :  1761717430.052654","logger":"task.stdout"}
+{"timestamp":"2025-10-29T05:57:10.056006Z","level":"info","event":"class initiates time :  0.0007512569427490234","logger":"task.stdout"}
+{"timestamp":"2025-10-29T05:57:10.057302Z","level":"info","event":"data load completed time :  0.001163482666015625","logger":"task.stdout"}
+{"timestamp":"2025-10-29T05:57:10.058735Z","level":"info","event":"data transform completed time :  0.0018658638000488281","logger":"task.stdout"}
+{"timestamp":"2025-10-29T05:57:10.060301Z","level":"info","event":"data encode completed time :  0.0019006729125976562","logger":"task.stdout"}
+{"timestamp":"2025-10-29T05:57:10.062851Z","level":"info","event":"model completed time :  0.0019412040710449219","logger":"task.stdout"}
+{"timestamp":"2025-10-29T05:57:10.120114Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/travel_airflow.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-10-29T05:57:10.509345Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}

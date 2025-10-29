@@ -59,3 +59,62 @@
 2025-10-09 17:31:00,398 - ModelTraining - INFO - Model training started.
 2025-10-09 17:38:36,919 - ModelTraining - INFO - Model training completed successfully.
 2025-10-09 17:38:37,680 - ModelTraining - ERROR - An error occurred during model training: continuous is not supported
+2025-10-13 09:10:44,780 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:10:44,975 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:10:45,006 - ModelTraining - INFO - Model training started.
+2025-10-13 09:22:35,070 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:22:35,240 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:22:35,259 - ModelTraining - INFO - Model training started.
+2025-10-13 09:24:07,704 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:24:07,879 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:24:07,904 - ModelTraining - INFO - Model training started.
+2025-10-13 09:24:47,578 - ModelTraining - INFO - Model training completed successfully.
+2025-10-13 09:24:47,654 - ModelTraining - ERROR - An error occurred during model training: continuous is not supported
+2025-10-13 09:27:01,508 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:27:01,688 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:27:01,725 - ModelTraining - INFO - Model training started.
+2025-10-13 09:30:17,976 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:30:17,979 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:30:17,982 - ModelTraining - INFO - Model training started.
+2025-10-13 09:30:18,010 - ModelTraining - INFO - Model training completed successfully.
+2025-10-13 09:30:18,026 - ModelTraining - INFO - Model Evaluation Metrics - 
+MAE: 20.0, 
+MSE: 400.0, 
+RMSE: 20.0, 
+R2: nan, 
+Accuracy: 0.0
+2025-10-13 09:30:39,051 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:30:39,154 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:30:39,167 - ModelTraining - INFO - Model training started.
+2025-10-13 09:31:14,331 - ModelTraining - INFO - Model training completed successfully.
+2025-10-13 09:31:14,445 - ModelTraining - ERROR - An error occurred during model training: continuous is not supported
+2025-10-13 09:37:05,249 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:37:05,457 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:37:05,527 - ModelTraining - INFO - Model training started.
+2025-10-13 09:37:54,025 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:37:54,029 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:37:54,039 - ModelTraining - INFO - Model training started.
+2025-10-13 09:37:54,115 - ModelTraining - INFO - Model training completed successfully.
+2025-10-13 09:37:54,118 - ModelTraining - INFO - Model evaluation started.
+2025-10-13 09:37:54,123 - ModelTraining - INFO - Model evaluation started. yPred calculated
+2025-10-13 09:37:54,137 - ModelTraining - INFO - Model evaluation started. mae and mse completed
+2025-10-13 09:37:54,161 - ModelTraining - INFO - Model evaluation started. rmse and r2 calculated
+2025-10-13 09:37:54,169 - ModelTraining - INFO - Model Evaluation Metrics - 
+MAE: 20.0, 
+MSE: 400.0, 
+RMSE: 20.0, 
+R2: nan
+2025-10-13 09:38:13,015 - ModelTraining - INFO - Data preprocessing completed successfully. and X,y split started
+2025-10-13 09:38:13,172 - ModelTraining - INFO - Data split into training and testing sets successfully.
+2025-10-13 09:38:13,205 - ModelTraining - INFO - Model training started.
+2025-10-13 09:38:51,175 - ModelTraining - INFO - Model training completed successfully.
+2025-10-13 09:38:51,176 - ModelTraining - INFO - Model evaluation started.
+2025-10-13 09:38:51,247 - ModelTraining - INFO - Model evaluation started. yPred calculated
+2025-10-13 09:38:51,254 - ModelTraining - INFO - Model evaluation started. mae and mse completed
+2025-10-13 09:38:51,259 - ModelTraining - INFO - Model evaluation started. rmse and r2 calculated
+2025-10-13 09:38:51,260 - ModelTraining - INFO - Model Evaluation Metrics - 
+MAE: 0.007434513960845409, 
+MSE: 0.21594222729781426, 
+RMSE: 0.46469584385683316, 
+R2: 0.9999983612086805
+2025-10-13 09:38:51,293 - ModelTraining - INFO - Model saved successfully at D:\AlmaBetter\P01_travelPrice\src\models\travel_price_model.pkl
