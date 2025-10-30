@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/927260837614605410
+creation_time: 1761845097223
+experiment_id: '927260837614605410'
+last_update_time: 1761845097223
+lifecycle_stage: active
+name: flight_price_prediction

@@ -1,0 +1,10 @@
+artifact_location: mlflow-artifacts:/0/models/m-20546ba82b0f47049ecb6d7a236c6fe7/artifacts
+creation_timestamp: 1761844418872
+experiment_id: '0'
+last_updated_timestamp: 1761844444046
+model_id: m-20546ba82b0f47049ecb6d7a236c6fe7
+model_type: ''
+name: dt_regression_model
+source_run_id: ae3f2d7b4a414fd99609cc905b6e73f8
+status: 2
+status_message: null

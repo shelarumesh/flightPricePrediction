@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/927260837614605410/41ac1df9745b41bfaa3bfefeea30f63e/artifacts
+end_time: 1761845149510
+entry_point_name: ''
+experiment_id: '927260837614605410'
+lifecycle_stage: active
+run_id: 41ac1df9745b41bfaa3bfefeea30f63e
+run_name: clean-shark-330
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761845129997
+status: 3
+tags: []
+user_id: shela
